@@ -1,0 +1,12 @@
+--- a/src/main/java/br/com/fiap/streamfiap/model/Documentario.java
++++ b/src/main/java/br/com/fiap/streamfiap/model/Documentario.java
+@@
+     public Documentario(String titulo, String categoria, int duracaoMinutos, int classificacaoEtaria, boolean disponivel, String tema) {
+         super(titulo, categoria, duracaoMinutos, classificacaoEtaria, disponivel);
+         this.tema = tema;
+     }
++
++    @Override
++    public double calcularPrecoAluguel() {
++        return 0.0;
++    }

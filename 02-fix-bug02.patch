@@ -1,0 +1,5 @@
+--- a/src/main/java/br/com/fiap/streamfiap/controller/ConteudoController.java
++++ b/src/main/java/br/com/fiap/streamfiap/controller/ConteudoController.java
+@@
+-        if (c.getCategoria() == categoria) {
++        if (c.getCategoria().equals(categoria)) {

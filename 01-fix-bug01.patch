@@ -1,0 +1,14 @@
+--- a/src/main/java/br/com/fiap/streamfiap/controller/ConteudoController.java
++++ b/src/main/java/br/com/fiap/streamfiap/controller/ConteudoController.java
+@@
+-    try {
+-        Conteudo conteudo = conteudoRepository.findById(id)
+-                .orElseThrow(() -> new ConteudoNaoEncontradoException("Conteúdo não encontrado: " + id));
+-        return ResponseEntity.ok(conteudo).getBody();
+-    } catch (Exception e) {
+-        // TODO: tratar isso depois
+-        return null;
+-    }
++    Conteudo conteudo = conteudoRepository.findById(id)
++            .orElseThrow(() -> new ConteudoNaoEncontradoException("Conteúdo não encontrado: " + id));
++    return ResponseEntity.ok(conteudo).getBody();

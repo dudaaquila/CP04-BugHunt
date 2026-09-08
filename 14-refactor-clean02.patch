@@ -1,0 +1,8 @@
+--- a/src/main/java/br/com/fiap/streamfiap/controller/ConteudoController.java
++++ b/src/main/java/br/com/fiap/streamfiap/controller/ConteudoController.java
+@@
+-    public Conteudo buscarPorId(@PathVariable Long id) {
++    public ResponseEntity<Conteudo> buscarPorId(@PathVariable Long id) {
+@@
+-        return ResponseEntity.ok(conteudo).getBody();
++        return ResponseEntity.ok(conteudo);

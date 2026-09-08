@@ -1,0 +1,5 @@
+--- a/src/main/java/br/com/fiap/streamfiap/model/Conteudo.java
++++ b/src/main/java/br/com/fiap/streamfiap/model/Conteudo.java
+@@
+-    public int duracaoMinutos;
++    private int duracaoMinutos;

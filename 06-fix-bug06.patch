@@ -1,0 +1,15 @@
+--- a/src/main/java/br/com/fiap/streamfiap/model/Serie.java
++++ b/src/main/java/br/com/fiap/streamfiap/model/Serie.java
+@@
+-    public Serie(String titulo, String categoria, int duracaoMinutos, int classificacaoEtaria, int numeroTemporadas) {
++    public Serie(String titulo, String categoria, int duracaoMinutos, int classificacaoEtaria, boolean disponivel, int numeroTemporadas) {
++        super(titulo, categoria, duracaoMinutos, classificacaoEtaria, disponivel);
+         this.numeroTemporadas = numeroTemporadas;
+     }
+--- a/src/main/java/br/com/fiap/streamfiap/controller/ConteudoController.java
++++ b/src/main/java/br/com/fiap/streamfiap/controller/ConteudoController.java
+@@
+-        Serie nova = new Serie(serie.getTitulo(), serie.getCategoria(), serie.duracaoMinutos,
+-                serie.getClassificacaoEtaria(), serie.getNumeroTemporadas());
++        Serie nova = new Serie(serie.getTitulo(), serie.getCategoria(), serie.getDuracaoMinutos(),
++                serie.getClassificacaoEtaria(), serie.isDisponivel(), serie.getNumeroTemporadas());

@@ -1,0 +1,15 @@
+--- a/src/main/java/br/com/fiap/streamfiap/model/Conteudo.java
++++ b/src/main/java/br/com/fiap/streamfiap/model/Conteudo.java
+@@
+-    public double calcularPrecoAluguel() {
+-        return 9.90;
+-    }
++    public abstract double calcularPrecoAluguel();
+--- a/src/main/java/br/com/fiap/streamfiap/model/Serie.java
++++ b/src/main/java/br/com/fiap/streamfiap/model/Serie.java
+@@
+-    public double calcularPrecoAluguel(double desconto) {
++    @Override
++    public double calcularPrecoAluguel() {
+         return 4.90 * numeroTemporadas;
+     }

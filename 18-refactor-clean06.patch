@@ -1,0 +1,7 @@
+Centralize as respostas de erro no GlobalExceptionHandler, mantendo um formato padrão:
+
+Map.of("erro", e.getMessage())
+
+Os handlers de ConteudoNaoEncontradoException, CreditosInsuficientesException,
+ConteudoIndisponivelException, ClassificacaoIndicativaException e IllegalArgumentException
+devem responder com esse mesmo formato. Ajuste apenas depois dos fixes correspondentes.

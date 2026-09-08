@@ -1,0 +1,15 @@
+--- a/src/main/java/br/com/fiap/streamfiap/model/Usuario.java
++++ b/src/main/java/br/com/fiap/streamfiap/model/Usuario.java
+@@
+ import br.com.fiap.streamfiap.exception.ClassificacaoIndicativaException;
++import br.com.fiap.streamfiap.exception.ConteudoIndisponivelException;
+@@
+         if (this.idade < c.getClassificacaoEtaria()) {
+@@
+         }
++
++        if (!c.isDisponivel()) {
++            throw new ConteudoIndisponivelException(c.getTitulo() + " nao esta disponivel para aluguel");
++        }
+
+         double p = c.calcularPrecoAluguel();

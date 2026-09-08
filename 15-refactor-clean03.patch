@@ -1,0 +1,2 @@
+Remova de ConteudoController.java o método privado não utilizado `calcularDescontoAntigo`
+e o bloco de comentários TODO referente a cupons antigos. Esse código não possui chamadas no projeto.

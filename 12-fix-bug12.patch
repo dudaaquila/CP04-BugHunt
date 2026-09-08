@@ -1,0 +1,11 @@
+--- a/src/main/java/br/com/fiap/streamfiap/exception/GlobalExceptionHandler.java
++++ b/src/main/java/br/com/fiap/streamfiap/exception/GlobalExceptionHandler.java
+@@
+     @ExceptionHandler(ClassificacaoIndicativaException.class)
+@@
+     }
++
++    @ExceptionHandler(IllegalArgumentException.class)
++    public ResponseEntity<Map<String, String>> handleIllegalArgument(IllegalArgumentException e) {
++        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("erro", e.getMessage()));
++    }

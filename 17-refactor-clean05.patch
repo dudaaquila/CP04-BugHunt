@@ -1,0 +1,7 @@
+Este refactor já é atendido pela alteração do bug03: o parâmetro `desconto` de
+`Serie.calcularPrecoAluguel(double desconto)` deixa de existir quando o método passa a
+sobrescrever corretamente `calcularPrecoAluguel()`.
+
+Para manter o histórico honesto, faça clean05 junto com bug03 OU separe a mudança:
+1) primeiro remova o parâmetro inútil e faça o commit clean05;
+2) depois inclua @Override e torne o método da superclasse abstrato no commit bug03.
